@@ -1,0 +1,23 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "npm init\r npm install nodemon -D\r mkdir <folder name>\r cd <folder name>\r cd ..\r node <file nsme>",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pavlo842/nodeJs.git"
+  },
+  "author": "pavlo842",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pavlo842/nodeJs/issues"
+  },
+  "homepage": "https://github.com/pavlo842/nodeJs#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.1"
+  }
+}
