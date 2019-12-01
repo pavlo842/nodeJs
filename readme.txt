@@ -13,3 +13,8 @@ npm init -y
 npm i express
 npm i nodemon
 npm i express-handlebars
+https://handlebarsjs.com/guide/#what-is-handlebars
+https://www.npmjs.com/package/express-handlebars
+https://pugjs.org/api/getting-started.html
+https://materializecss.com/
+
