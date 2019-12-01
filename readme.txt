@@ -12,3 +12,4 @@ EXPRESS
 npm init -y
 npm i express
 npm i nodemon
+npm i express-handlebars
