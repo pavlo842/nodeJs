@@ -7,3 +7,7 @@ node <file nsme>
 
 npm run start
 npm run dev
+
+npm init -y
+npm i express
+npm i nodemon
