@@ -138,6 +138,7 @@ app.set('view engine', 'hbs')
 app.set('views', 'views')
 
 app.use(express.static('public'))
+app.use(express.urlencoded({extended: true}))
 
 app.use('/add', addRoutes) // '/add' - префикс - в add.js оставить только '/'
 app.use('/',homeRoutes)
