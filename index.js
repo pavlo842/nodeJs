@@ -115,7 +115,7 @@
 
 // ---
 // 3-1 NODE-EXPRESS
-// 3-2 Handlebars
+// 3-3 Handlebars
 
 const express = require('express')
 const exphbs = require('express-handlebars')
