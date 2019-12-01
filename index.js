@@ -118,9 +118,13 @@
 // 3-3 Handlebars
 
 // 3-6 рендеринг
+// 3-7 routers
 
 const express = require('express')
 const exphbs = require('express-handlebars')
+const addRoutes = require('./routes/add')
+const homeRoutes = require('./routes/home')
+const coursesRoutes = require('./routes/courses')
 
 const app = express()
 
@@ -133,29 +137,11 @@ app.engine('hbs', hbs.engine)
 app.set('view engine', 'hbs')
 app.set('views', 'views')
 
-
 app.use(express.static('public'))
 
-app.get('/', (req, res) => {
-    res.render('index', {
-        title: 'Home page',
-        isHome: true
-    })
-})
-
-app.get('/add', (req, res) => {
-    res.render('add', {
-        title: 'Add course',
-        isAdd: true
-    })
-})
-
-app.get('/courses', (req, res) => {
-    res.render('courses', {
-        title: 'Courses',
-        isCourses: true
-    })
-})
+app.use('/add', addRoutes) // '/add' - префикс - в add.js оставить только '/'
+app.use('/',homeRoutes)
+app.use('/courses',coursesRoutes)
 
 const PORT = process.env.PORT || 3000
 
