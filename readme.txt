@@ -18,3 +18,5 @@ https://www.npmjs.com/package/express-handlebars
 https://pugjs.org/api/getting-started.html
 https://materializecss.com/
 
+npm i uuid  -  уникальный идентификатор
+
