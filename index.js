@@ -124,6 +124,7 @@ const express = require('express')
 const exphbs = require('express-handlebars')
 const addRoutes = require('./routes/add')
 const homeRoutes = require('./routes/home')
+const cardRoutes = require('./routes/card')
 const coursesRoutes = require('./routes/courses')
 
 const app = express()
@@ -143,6 +144,7 @@ app.use(express.urlencoded({extended: true}))
 app.use('/add', addRoutes) // '/add' - префикс - в add.js оставить только '/'
 app.use('/',homeRoutes)
 app.use('/courses',coursesRoutes)
+app.use('/card', cardRoutes)
 
 const PORT = process.env.PORT || 3000
 
