@@ -130,6 +130,8 @@ const path = require('path')
 
 const app = express()
 
+const url = 'mongodb+srv://pavlo:jI6STQNqbc48BjnH@cluster0-mpveb.mongodb.net/test?retryWrites=true&w=majority'
+
 const hbs = exphbs.create({
     defaultLayout: 'main',
     extname: 'hbs'
