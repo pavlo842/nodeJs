@@ -22,4 +22,5 @@ npm i uuid  -  уникальный идентификатор
 
 if error [nodemon] app crashed - waiting for file changes before starting...  ----   kill $(lsof -t -i:3000)
 
-
+Mongo DB
+npm i mongoose --save

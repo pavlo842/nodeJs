@@ -122,6 +122,7 @@
 
 const express = require('express')
 const exphbs = require('express-handlebars')
+const mongoose = require('mongoose')
 const addRoutes = require('./routes/add')
 const homeRoutes = require('./routes/home')
 const cardRoutes = require('./routes/card')
@@ -130,7 +131,6 @@ const path = require('path')
 
 const app = express()
 
-const url = 'mongodb+srv://pavlo:jI6STQNqbc48BjnH@cluster0-mpveb.mongodb.net/test?retryWrites=true&w=majority'
 
 const hbs = exphbs.create({
     defaultLayout: 'main',
@@ -151,6 +151,17 @@ app.use('/card', cardRoutes)
 
 const PORT = process.env.PORT || 3000
 
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`)
-})
+async function start() {
+    try {
+        const url = 'mongodb+srv://pavlo:jI6STQNqbc48BjnH@cluster0-mpveb.mongodb.net/test?retryWrites=true&w=majority'
+        await mongoose.connect(url, {useNewUrlParser: true})
+        app.listen(PORT, () => {
+            console.log(`Server is running on port ${PORT}`)
+        })
+    } catch (e) {
+        console.log(e)
+    }
+} 
+
+start()
+
