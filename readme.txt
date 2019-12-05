@@ -7,3 +7,18 @@ node <file nsme>
 
 npm run start
 npm run dev
+
+EXPRESS
+npm init -y
+npm i express
+npm i nodemon
+npm i express-handlebars
+https://handlebarsjs.com/guide/#what-is-handlebars
+https://www.npmjs.com/package/express-handlebars
+https://pugjs.org/api/getting-started.html
+https://materializecss.com/
+
+npm i uuid  -  уникальный идентификатор
+
+if error [nodemon] app crashed - waiting for file changes before starting...  ----   kill $(lsof -t -i:3000)
+
