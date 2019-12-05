@@ -2,7 +2,6 @@ const {Router} = require('express')
 // 2-й вариант
 // const express.Router = require('express')
 const Course = require('../models/course')
-
 const router = Router()
 
 router.get('/', (req, res) => {
@@ -13,7 +12,6 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', async (req, res) => {
-    console.log(req.body)
     const course = new Course(req.body.title, req.body.price, req.body.img)
 
     await course.save()
