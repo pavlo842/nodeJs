@@ -24,3 +24,8 @@ if error [nodemon] app crashed - waiting for file changes before starting...  --
 
 Mongo DB
 npm i mongoose --save
+
+1. https://cloud.mongodb.com/v2/5de8edebf2a30b7c7403823e#security/network/whitelist
+2. add ip adress
+3. 
+
