@@ -27,5 +27,8 @@ npm i mongoose --save
 
 1. https://cloud.mongodb.com/v2/5de8edebf2a30b7c7403823e#security/network/whitelist
 2. add ip adress
-3. 
+3.
+
+clear - очистить консоль
+cls - очистить консоль windows
 
