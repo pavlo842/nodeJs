@@ -5,7 +5,10 @@ const Course = require('../models/course')
 const router = Router()
 
 router.get('/', async (req, res) => {
-    const courses = await Course.find()
+    const courses = await Course.find().populate('userId', 'email mail').select('price title img') // .populate() - вывод в консоль инфы о юзере .select() - вывод инфы о курсе
+
+    console.log(courses)
+
     res.render('courses', {
         title: 'Courses',
         isCourses: true,
