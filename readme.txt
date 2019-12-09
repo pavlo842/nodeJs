@@ -21,6 +21,7 @@ https://materializecss.com/
 npm i uuid  -  уникальный идентификатор
 
 if error [nodemon] app crashed - waiting for file changes before starting...  ----   kill $(lsof -t -i:3000)
+sudo fuser -k 3000/tcp
 
 Mongo DB
 npm i mongoose --save
