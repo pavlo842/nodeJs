@@ -27,7 +27,7 @@ const userSchema = new Schema({
     }
 })
 
-userSchema.method.addToCart = function(course) {
+userSchema.methods.addToCart = function(course) {
     const items = [...this.cart.items]
     const idx = items.findIndex(c => {
         return c.courseId.toString() === course._id.toString()
@@ -41,9 +41,6 @@ userSchema.method.addToCart = function(course) {
             count: 1,
         })
     }
-
-    // const newCart = {items: clonedItems}
-    // this.cart = newCart
 
     this.cart = {items}
     return this.save()
