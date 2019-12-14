@@ -2096,3 +2096,10 @@ node_modules/sparse-bitfield/LICENSE
 node_modules/sparse-bitfield/package.json
 node_modules/sparse-bitfield/README.md
 node_modules/sparse-bitfield/test.js
+node_modules/mongoose/build-browser.js
+node_modules/mongoose/webpack.base.config.js
+node_modules/mongoose/webpack.config.js
+node_modules/mongoose/lib/validoptions.js
+node_modules/mongoose/lib/error/timeout.js
+node_modules/mongoose/lib/helpers/schema/addAutoId.js
+node_modules/mongoose/lib/options/SchemaSingleNestedOptions.js

@@ -126,6 +126,7 @@ const mongoose = require('mongoose')
 const addRoutes = require('./routes/add')
 const homeRoutes = require('./routes/home')
 const cardRoutes = require('./routes/card')
+const ordersRoutes = require('./routes/orders')
 const coursesRoutes = require('./routes/courses')
 const path = require('path')
 const User = require('./models/user')
@@ -155,10 +156,12 @@ app.use(async (req, res, next) => {
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(express.urlencoded({extended: true}))
 
+// Регистрация роутов
 app.use('/add', addRoutes) // '/add' - префикс - в add.js оставить только '/'
 app.use('/',homeRoutes)
 app.use('/courses',coursesRoutes)
 app.use('/card', cardRoutes)
+app.use('/orders', ordersRoutes)
 
 const PORT = process.env.PORT || 3000
 
