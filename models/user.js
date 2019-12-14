@@ -60,4 +60,10 @@ userSchema.methods.removeFromCart = function(id) {
     return this.save()
 }
 
+// Метод очситки корзины
+userSchema.methods.clearCart = function() {
+    this.cart = {items: []}
+    return this.save()
+} 
+
 module.exports = model('User', userSchema)
