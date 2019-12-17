@@ -12,6 +12,7 @@ const authRoutes = require('./routes/auth')
 const path = require('path')
 const User = require('./models/user')
 const varMiddleware = require('./middleware/variables')
+const userMiddleware = require('./middleware/user')
 
 
 const MONGODB_URI = `mongodb+srv://pavlo842:BJiUVsoVw1XasikA@cluster0-mpveb.mongodb.net/shop`
@@ -38,6 +39,7 @@ app.use(session({
     store
 }))
 app.use(varMiddleware)
+app.use(userMiddleware)
 
 // Регистрация роутов
 app.use('/add', addRoutes) // '/add' - префикс - в add.js оставить только '/'
