@@ -145,17 +145,6 @@ const hbs = exphbs.create({
 app.engine('hbs', hbs.engine)
 app.set('view engine', 'hbs')
 app.set('views', 'views')
-
-app.use(async (req, res, next) => {
-    try {
-        const user = await User.findById('5dea60a35ec7144c1797aca1')
-        req.user = user
-        next()
-    } catch (e) {
-        console.log(e)
-    }
-})
-
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(express.urlencoded({extended: true}))
 app.use(session({
@@ -183,15 +172,15 @@ async function start() {
             useUnifiedTopology: true,
             useFindAndModify: false
         })
-        const candidate = await User.findOne()
-        if (!candidate) {
-            const user = new User({
-                email: 'pavlo842@mail.ru',
-                name: 'pavlo842',
-                cart: {items: []}
-            })
-            await user.save()
-        }
+        // const candidate = await User.findOne()
+        // if (!candidate) {
+        //     const user = new User({
+        //         email: 'pavlo842@mail.ru',
+        //         name: 'pavlo842',
+        //         cart: {items: []}
+        //     })
+        //     await user.save()
+        // }
         app.listen(PORT, () => {
             console.log(`Server is running on port ${PORT}`)
         })
