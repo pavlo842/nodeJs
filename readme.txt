@@ -36,3 +36,6 @@ cls - очистить консоль windows
 5-2 Подключение пакета с сессиями
 sudo npm i express-session
 
+5-4 Сессия в mongoDB
+sudo npm i connect-mongodb-session
+
