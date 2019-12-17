@@ -122,6 +122,7 @@
 
 const express = require('express')
 const exphbs = require('express-handlebars')
+const session = require('express-session')
 const mongoose = require('mongoose')
 const addRoutes = require('./routes/add')
 const homeRoutes = require('./routes/home')
@@ -131,6 +132,7 @@ const coursesRoutes = require('./routes/courses')
 const authRoutes = require('./routes/auth')
 const path = require('path')
 const User = require('./models/user')
+const varMiddleware = require('./middleware/variables')
 
 const app = express()
 
@@ -156,6 +158,12 @@ app.use(async (req, res, next) => {
 
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(express.urlencoded({extended: true}))
+app.use(session({
+    secret: 'some secret value',
+    resave: false,
+    saveUninitialized: false
+}))
+app.use(varMiddleware)
 
 // Регистрация роутов
 app.use('/add', addRoutes) // '/add' - префикс - в add.js оставить только '/'

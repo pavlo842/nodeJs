@@ -33,3 +33,6 @@ npm i mongoose --save
 clear - очистить консоль
 cls - очистить консоль windows
 
+5-2 Подключение пакета с сессиями
+sudo npm i express-session
+
