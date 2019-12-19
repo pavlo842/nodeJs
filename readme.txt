@@ -39,3 +39,6 @@ sudo npm i express-session
 5-4 Сессия в mongoDB
 sudo npm i connect-mongodb-session
 
+5-9 Шифрование пароля
+sudo npm i bcryptjs
+
