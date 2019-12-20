@@ -42,3 +42,6 @@ sudo npm i connect-mongodb-session
 5-9 Шифрование пароля
 sudo npm i bcryptjs
 
+5-10 CSURF
+sudo npm i csurf
+
