@@ -48,3 +48,5 @@ sudo npm i csurf
 5-11 Connect flash
 sudo npm i connect-flash
 
+6-3 
+sudo npm i nodemailer nodemailer-sendgrid-transport
