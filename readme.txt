@@ -45,3 +45,6 @@ sudo npm i bcryptjs
 5-10 CSURF
 sudo npm i csurf
 
+5-11 Connect flash
+sudo npm i connect-flash
+
