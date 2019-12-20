@@ -2,21 +2,32 @@ const {Router} = require('express')
 // 2-й вариант
 // const express.Router = require('express')
 const Course = require('../models/course')
+const auth = require('../middleware/auth')
 const router = Router()
 
-router.get('/', (req, res) => {
+router.get('/', auth, (req, res) => {
     res.render('add', {
         title: 'Add course',
         isAdd: true
     })
 })
 
-router.post('/', async (req, res) => {
-    const course = new Course(req.body.title, req.body.price, req.body.img)
+router.post('/', auth, async (req, res) => {
+    // const course = new Course(req.body.title, req.body.price, req.body.img)
+    const course = new Course({
+        title: req.body.title,
+        price: req.body.price,
+        img: req.body.img,
+        userId: req.user,
+    })
 
-    await course.save()
+    try {
+        await course.save()
+        res.redirect('/courses')
+    } catch (e) {
+        console.log(e)
+    }
 
-    res.redirect('/courses')
 })
 
 module.exports = router
