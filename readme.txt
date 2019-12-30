@@ -55,4 +55,7 @@ sudo npm i nodemailer nodemailer-sendgrid-transport
 https://express-validator.github.io/docs/
 sudo npm install --save express-validator
 
+7-8 load files
+sudo npm install multer
+
 
