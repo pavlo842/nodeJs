@@ -3,6 +3,6 @@ module.exports = {
         if (a == b) {
             return options.fn(this)
         }
-        return options.inverrse(this)
+        return options.inverse(this)
     }
 }
