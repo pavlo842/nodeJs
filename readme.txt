@@ -50,3 +50,9 @@ sudo npm i connect-flash
 
 6-3 
 sudo npm i nodemailer nodemailer-sendgrid-transport
+
+7-1 express-validator
+https://express-validator.github.io/docs/
+sudo npm install --save express-validator
+
+
