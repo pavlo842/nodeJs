@@ -6,7 +6,7 @@ const auth = require('../middleware/auth')
 const router = Router()
 
 function isOwner(course, req) {
-    return course.userId.toString() !== req.user._id.toString()
+    return course.userId.toString() === req.user._id.toString()
 }
 
 router.get('/', async (req, res) => {
@@ -52,7 +52,12 @@ router.post('/edit', auth, async (req, res) => {
     try {
         const {id} = req.body
         delete req.body.id
-        await Course.findByIdAndUpdate(id, req.body)
+        const course = await Course.findById(id) 
+        if (!isOwner(course)) {
+            return res.redirect('/courses')
+        }
+        Object.assign(course, req.body)
+        await course.save()
         res.redirect('/courses')
     } catch (e) {
         console.log(e)
