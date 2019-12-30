@@ -1,0 +1,42 @@
+<h1>Profile</h1>
+
+<div class="row">
+    <div class="col s6">
+        <img
+            class="avatar"
+            src="https://s0.tchkcdn.com/g-vB-Yzs3wAg8V7azHBd0QXQ/9/59960/660x0/w/0/205253_f85.jpeg"
+            alt=""
+        >
+
+        <p>Not avatars</p>
+    </div>
+
+    <div class="col s6">
+        <form action="/profile" method="POST">
+
+            <p>You email: <strong>{{user.email}}</strong></p>
+
+            <div class="input-field">
+                <input id="name" type="text" name="name" class="validate" required value="{{user.name}}">
+                <label for="name">Profile Name</label>
+                <span class="helper-text" data-error="Name cannot be empty"></span>
+            </div>
+
+            <div class="file-field input-field">
+                <div class="btn">
+                    <span>Avatar</span>
+                    <input type="file" name="avatar">
+                </div>
+                <div class="file-path-wrapper">
+                    <input class="file-path validate" type="text">
+                </div>
+            </div>
+
+            <input type="hidden" name="_csrf" value="{{ csrf }}">
+
+            <button type="submit" class="btn">Сhange</button>
+
+        </form>
+    </div>
+
+</div>
