@@ -65,3 +65,11 @@ sudo npm i helmet
 8-3 install compression
 https://www.npmjs.com/package/compression
 sudo npm i compression
+
+8-4 add heroku
+heroku.com
+https://devcenter.heroku.com/
+heroku -v
+heroku login - далее консоль - открытие браузера
+heroku create
+
