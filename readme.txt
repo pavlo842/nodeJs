@@ -60,5 +60,8 @@ sudo npm install multer
 
 8-2 install helmet
 https://www.npmjs.com/package/helmet
-npm i helmet
+sudo npm i helmet
 
+8-3 install compression
+https://www.npmjs.com/package/compression
+sudo npm i compression
