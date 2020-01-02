@@ -58,4 +58,7 @@ sudo npm install --save express-validator
 7-8 load files
 sudo npm install multer
 
+8-2 install helmet
+https://www.npmjs.com/package/helmet
+npm i helmet
 
