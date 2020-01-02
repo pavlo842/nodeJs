@@ -4900,3 +4900,7 @@ node_modules/xtend/mutable.js
 node_modules/xtend/package.json
 node_modules/xtend/README.md
 node_modules/xtend/test.js
+node_modules/mongodb/lib/core/cmap/connection.js
+node_modules/mongodb/lib/core/cmap/message_stream.js
+node_modules/mongoose/dist/browser.umd.js
+node_modules/mongoose/lib/helpers/schema/handleIdOption.js
