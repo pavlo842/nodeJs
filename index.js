@@ -6,6 +6,7 @@ const exphbs = require('express-handlebars')
 const session = require('express-session')
 const MongoStore = require('connect-mongodb-session')(session)
 const mongoose = require('mongoose')
+const helmet = require('helmet')
 const addRoutes = require('./routes/add')
 const homeRoutes = require('./routes/home')
 const cardRoutes = require('./routes/card')
@@ -31,6 +32,7 @@ const hbs = exphbs.create({
     helpers: require('./utils/utils-helpers')
 })
 
+// Регистрация middleware
 app.engine('hbs', hbs.engine)
 app.set('view engine', 'hbs')
 app.set('views', 'views')
@@ -46,6 +48,7 @@ app.use(session({
 app.use(fileMiddleware.single('avatar'))
 app.use(csrf())
 app.use(flash())
+app.use(helmet())
 app.use(varMiddleware)
 app.use(userMiddleware)
 
